@@ -31,6 +31,7 @@ Sometimes it is necesarry to config manage .yml files.
   - name: manage yaml files
     yedit:
       src: /tmp/test.yaml
+      separator: "#"
       key: a#b#c
       value:
         d:
@@ -42,6 +43,7 @@ Sometimes it is necesarry to config manage .yml files.
     yedit:
       src: /tmp/test.yaml
       state: list
+      separator: "#"
       key: a#b#c#d#e#f
     register: yeditout
   - debug: var=yeditout
